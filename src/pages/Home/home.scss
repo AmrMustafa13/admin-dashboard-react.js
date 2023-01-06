@@ -1,6 +1,7 @@
 .home {
   display: flex;
   .home-container {
+    overflow: hidden;
     flex: 6;
     .widgets,
     .charts {
@@ -20,6 +21,32 @@
         color: gray;
         margin-bottom: 15px;
       }
+    }
+  }
+
+  // make the home page responsive
+  @media screen and (max-width: 1200px) {
+    .sidebar {
+      display: none;
+    }
+    .charts {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .list-container {
+      .table {
+        overflow-x: scroll;
+      }
+    }
+    .widgets {
+      flex-wrap: wrap;
+      .widget {
+        margin: 5px 0;
+      }
+    }
+    .navbar {
+      display: none;
     }
   }
 }
