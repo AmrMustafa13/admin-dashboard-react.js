@@ -10,13 +10,13 @@ import FullscreenExitIcon from "@mui/icons-material/FullscreenExit";
 import { DarkModeContext } from "../../contexts/darkModeContext";
 
 const Navbar = () => {
-  const { dispatch } = useContext(DarkModeContext);
+  const { darkMode, dispatch } = useContext(DarkModeContext);
 
   return (
     <div className="navbar">
       <div className="wrapper">
         <div className="search">
-          <input placeholder="Search" />
+          <input placeholder="Search" style={{ color: darkMode && "white" }} />
           <SearchIcon className="icon" />
         </div>
         <div className="items">
