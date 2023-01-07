@@ -1,7 +1,7 @@
 .single {
   display: flex;
-  width: 100%;
   .single-container {
+    overflow: hidden;
     flex: 6;
     .top {
       padding: 20px;
@@ -62,6 +62,25 @@
       font-size: 16px;
       margin-bottom: 20px;
       color: lightgray;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .sidebar {
+      display: none;
+    }
+    .responsive {
+      display: block;
+    }
+    .top {
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 410px) {
+    .left {
+      .item {
+        display: block !important;
+        word-break: break-word;
+      }
     }
   }
 }

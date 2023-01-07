@@ -62,4 +62,27 @@
       }
     }
   }
+  @media screen and (max-width: 1200px) {
+    .sidebar {
+      display: none;
+    }
+    .responsive {
+      display: block;
+    }
+    height: 100vh;
+  }
+  @media screen and (max-width: 580px) {
+    .bottom {
+      .left {
+        img {
+          width: 50px !important;
+          height: 50px !important;
+        }
+      }
+    }
+    .bottom {
+      flex-direction: column;
+    }
+  }
+  overflow-x: scroll;
 }

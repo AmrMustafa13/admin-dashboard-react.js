@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./new.scss";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Navbar from "../../components/Navbar/Navbar";
 import { DriveFolderUploadOutlined } from "@mui/icons-material";
+import { ResponsiveContext } from "../../contexts/responsiveContext";
 
 const New = ({ title, inputs }) => {
   const [file, setFile] = useState("");
+  const { dispatch, responsive } = useContext(ResponsiveContext);
 
   return (
     <div className="new">
-      <Sidebar />
+      <Sidebar responsive={responsive} />
       <div className="new-container">
-        <Navbar />
+        <Navbar responsive={responsive} resDispatch={dispatch} />
         <div className="top">
           <h1>{title}</h1>
         </div>

@@ -10,19 +10,22 @@ import FullscreenExitIcon from "@mui/icons-material/FullscreenExit";
 import CloseIcon from "@mui/icons-material/Close";
 import { DarkModeContext } from "../../contexts/darkModeContext";
 
-const Navbar = ({ responsive, setResponsive }) => {
+const Navbar = ({ responsive, resDispatch }) => {
   const { darkMode, dispatch } = useContext(DarkModeContext);
 
   return (
     <div className="navbar">
-      <div
-        className="responsive-btn"
-        onClick={() => setResponsive((state) => !state)}
-      >
+      <div className="responsive-btn">
         {responsive ? (
-          <CloseIcon className="icon" />
+          <CloseIcon
+            className="icon"
+            onClick={() => resDispatch({ type: "NOT_RESPONSIVE" })}
+          />
         ) : (
-          <ListIcon className="icon" />
+          <ListIcon
+            className="icon"
+            onClick={() => resDispatch({ type: "RESPONSIVE" })}
+          />
         )}
       </div>
       <div className="wrapper">
@@ -51,9 +54,6 @@ const Navbar = ({ responsive, setResponsive }) => {
           <div className="item">
             <ChatBubbleOutlineIcon className="icon" />
             <div className="counter">2</div>
-          </div>
-          <div className="item">
-            <ListIcon className="icon" />
           </div>
           <div className="item">
             <img

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./home.scss";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Navbar from "../../components/Navbar/Navbar";
@@ -6,15 +6,16 @@ import Widget from "../../components/Widget/Widget";
 import Featured from "../../components/Featured/Featured";
 import Chart from "../../components/Chart/Chart";
 import Table from "../../components/Table/Table";
+import { ResponsiveContext } from "../../contexts/responsiveContext";
 
 const Home = () => {
-  const [responsive, setResponsive] = useState(false);
+  const { dispatch, responsive } = useContext(ResponsiveContext);
 
   return (
     <div className="home">
       <Sidebar responsive={responsive} />
       <div className="home-container">
-        <Navbar responsive={responsive} setResponsive={setResponsive} />
+        <Navbar responsive={responsive} resDispatch={dispatch} />
         <div className="widgets">
           <Widget type="user" />
           <Widget type="order" />
