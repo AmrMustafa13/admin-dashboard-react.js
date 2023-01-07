@@ -25,18 +25,18 @@ const Single = () => {
                 src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
               />
               <div className="details">
-                <h1 className="item-title">John Doe</h1>
+                <h1 className="item-title">Amr Mustafa</h1>
                 <div className="detail-item">
                   <span className="item-key">Email:</span>
                   <span className="item-key">amrmostafa@gmail.com</span>
                 </div>
                 <div className="detail-item">
                   <span className="item-key">Phone:</span>
-                  <span className="item-key">+1 234 567 89</span>
+                  <span className="item-key">+201062708063</span>
                 </div>
                 <div className="detail-item">
                   <span className="item-key">Address:</span>
-                  <span className="item-key">39 Mansoura</span>
+                  <span className="item-key">39 St - Mansoura</span>
                 </div>
                 <div className="detail-item">
                   <span className="item-key">Country:</span>
