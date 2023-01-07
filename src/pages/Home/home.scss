@@ -29,6 +29,9 @@
     .sidebar {
       display: none;
     }
+    .responsive {
+      display: block;
+    }
     .charts {
       display: flex;
       flex-direction: column-reverse;
@@ -44,9 +47,6 @@
       .widget {
         margin: 5px 0;
       }
-    }
-    .navbar {
-      display: none;
     }
   }
 }

@@ -7,13 +7,24 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import ListIcon from "@mui/icons-material/List";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import FullscreenExitIcon from "@mui/icons-material/FullscreenExit";
+import CloseIcon from "@mui/icons-material/Close";
 import { DarkModeContext } from "../../contexts/darkModeContext";
 
-const Navbar = () => {
+const Navbar = ({ responsive, setResponsive }) => {
   const { darkMode, dispatch } = useContext(DarkModeContext);
 
   return (
     <div className="navbar">
+      <div
+        className="responsive-btn"
+        onClick={() => setResponsive((state) => !state)}
+      >
+        {responsive ? (
+          <CloseIcon className="icon" />
+        ) : (
+          <ListIcon className="icon" />
+        )}
+      </div>
       <div className="wrapper">
         <div className="search">
           <input placeholder="Search" style={{ color: darkMode && "white" }} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.scss";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Navbar from "../../components/Navbar/Navbar";
@@ -8,11 +8,13 @@ import Chart from "../../components/Chart/Chart";
 import Table from "../../components/Table/Table";
 
 const Home = () => {
+  const [responsive, setResponsive] = useState(false);
+
   return (
     <div className="home">
-      <Sidebar />
+      <Sidebar responsive={responsive} />
       <div className="home-container">
-        <Navbar />
+        <Navbar responsive={responsive} setResponsive={setResponsive} />
         <div className="widgets">
           <Widget type="user" />
           <Widget type="order" />

@@ -63,4 +63,23 @@
       }
     }
   }
+  position: relative;
+  .responsive-btn {
+    position: absolute;
+    right: 25px;
+    top: 8px;
+    cursor: pointer;
+    .icon {
+      font-size: 34px;
+    }
+    display: none;
+  }
+  @media screen and (max-width: 760px) {
+    .wrapper {
+      display: none;
+    }
+    .responsive-btn {
+      display: block;
+    }
+  }
 }

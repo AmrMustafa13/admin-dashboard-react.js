@@ -15,11 +15,11 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../contexts/darkModeContext";
 
-const Sidebar = () => {
+const Sidebar = ({ responsive }) => {
   const { dispatch } = useContext(DarkModeContext);
 
   return (
-    <div className="sidebar">
+    <div className={responsive ? "responsive sidebar" : "sidebar"}>
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
           <span className="logo">Dashboard</span>
